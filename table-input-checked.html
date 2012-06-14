@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/jquery-1-7-2.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+
+
+<script type="text/javascript">
+$(function(){
+
+$('table tr').click(function(){
+	
+	$(this).addClass('active').siblings().removeClass('active');
+	$(this).find('input').attr('checked','checked').siblings().attr('');
+	});
+	
+	
+
+
+});
+</script>
+<style type="text/css">
+table tr{position:relative;}
+table tr td{padding:5px;}
+table tr:hover td{background-color:#F3F3F3;}
+table tr.active td{background-color:#CCC;}
+table tr:hover.active td{background-color:#F00;}
+</style>
+</head>
+
+<body>
+<div class="clone" style="position:absolute;">
+<table cellpadding="0" cellspacing="0"></table>
+</div>
+
+<table cellpadding="0" cellspacing="0" id="yvz">
+<tr><td><input type="radio" name="rd" value="1" /></td><td>Seçenek 1</td></tr>
+<tr><td><input type="radio" name="rd" value="2" /></td><td>Seçenek 2</td></tr>
+<tr><td><input type="radio" name="rd" value="3" /></td><td>Seçenek 3</td></tr>
+<tr><td><input type="radio" name="rd" value="4" /></td><td>Seçenek 4</td></tr>
+<tr><td><input type="radio" name="rd" value="5" /></td><td>Seçenek 5</td></tr>
+
+
+</table>
+
+</body>
+</html>

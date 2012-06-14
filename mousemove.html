@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+div{display:block;}
+</style>
+<script type="text/javascript" src="js/jquery-1-7-2.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('body').append('<div />');
+
+//$(document).on('mouseout', function(){
+//	console.log('cikti');
+//	});
+//
+//
+$('body').mousemove(function(e){
+      var pageCoords = "( " + e.pageX + ", " + e.pageY + " )";
+      var clientCoords = "( " + e.clientX + ", " + e.clientY + " )";
+      console.log(e.pageX, e.pageY );
+      console.log(e.clientX, e.clientY);
+    });
+
+
+
+
+ var oldLocation = location.href;
+ setInterval(function() {
+      if(location.href != oldLocation) {
+           console.log('x');
+		   $('body').append('<div />');
+		   //do your action
+           oldLocation = location.href
+      }
+  }, 1000); // check every second
+
+
+});
+</script>
+</head>
+
+<body>
+</body>
+</html>
