@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+div#a{width:100px;height:100px;background-color:#F00;display:none;}
+div#b{width:100px;height:100px;background-color:#558844;display:block;}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+function messageAjax (msg) {
+    if (jQuery("body").find("#infoBox").length == 0) {
+		jQuery("body").prepend("<div id=\"infoBox\" style=\"height: 20px;background-color:#ffffff;width:100%;display:none;text-align:center;border-bottom:#2BBAE4 1px solid;\"></div>");
+	} // END IF
+	
+	jQuery("body").find("#infoBox").text(msg).slideDown().delay(3000).slideUp();
+}
+messageAjax('I m on top of everything');
+
+
+
+});
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
