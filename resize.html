@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+var $w = $(window).width();
+var $h = $(window).height();
+
+$('body').append(
+			$('<div class="alertt" />').css({left: ($w - 400) / 2 , top: ($h - 400) / 2})
+			.append($('<div class="close" />')
+					.append('<span>x</span>')
+					)
+			)
+			.append($('<div class="wrap" />'));	
+
+$(window).resize(function(){
+var $w = $(window).width();
+var $h = $(window).height();
+$('div.alertt').animate({left: ($w - 400) / 2 , top: ($h - 400) / 2}, 'fast');
+});
+
+
+$('div.close').click(function(){
+$('.wrap, .alertt, .close').remove();
+});
+
+});
+</script>
+
+<style type="text/css">
+body{position:relative; margin:0; padding:0;}
+.wrap{background-color:#000; opacity:0.8; position:fixed; width:100%; height:100%; z-index:10;}
+div.alertt{position:absolute; z-index:11; width:400px; height:400px; background-color:#FF0; }
+div.alertt div.close{background-color:#000; position:absolute; right:-30px; top:0; width:30px; height:30px; font-size:24px; text-align:center; color:#FFF; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; display:table; vertical-align:middle;}
+div.close  span{-moz-transform':'rotate(0deg);}
+</style>
+</head>
+
+<body>
+</body>
+</html>
