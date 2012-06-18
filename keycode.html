@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+
+
+
+$('input#inp').keyup(function(event){
+var deger = $('input#inp').val();
+var inp = deger.substring(0, 1);
+
+if(inp == '3')
+$('input#inp').attr({ size: '17', maxLength: '17' });
+
+if (
+(event.keyCode != 8 && deger.length == 5) || (event.keyCode != 8 && deger.length == 12)) {
+$('input#inp').val(deger + ' ');
+}
+
+
+
+});
+
+});
+</script>
+</head>
+
+<body>
+<input type="hidden" id="inpH" />
+<input type="text" id="inp" />
+
+
+<a href="javascript:;" id="Gonder">Gonder</a>
+
+
+</body>
+</html>
