@@ -14,7 +14,7 @@ $(function(){
 $('input#inp').keyup(function(event){
 var deger = $('input#inp').val();
 var inp = deger.substring(0, 1);
-
+$('input#inpH').val(deger.replace(/\s/g, ''));
 if(inp == '3')
 $('input#inp').attr({ size: '17', maxLength: '17' });
 
