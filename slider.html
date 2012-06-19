@@ -13,7 +13,7 @@ var nextBtn = $('div.next');
 var l = $('div.kutular').length;
 var w = $('div.kutular').outerWidth();
 var tw = (l * w);
-console.log(((tw - w) / tw));
+console.log(tw - tw);
 $('div.divInner').css('width',tw);
 $('div.kutular').each(function(index) {$(this).attr('id',index);});
 i=0;
@@ -62,7 +62,7 @@ if(ni == ml)
 	{
 	nextBtn.attr('data',$('div.kutular:first-child').attr('id'));
 	i=$('div.kutular:first-child').attr('id');
-	$('div.divInner').css({left:'-' +((tw - w) / tw)});	
+	$('div.divInner').css({left:'-' +(tw - tw)});	
 	$('div.next').attr('data', $('div.kutular:fist-child').attr('id'));	
 	}else
 	{
