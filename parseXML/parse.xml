@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Jetrend>
+
+  <cat name='mercan'>
+  <urun>
+    <adi>Mornflake Yulaf Ezmesi 500gr</adi>
+    <resim>images/mornflake-yulaf-ezmesi-500gr-583.jpg</resim>
+    <eskifiyat>14.50 TL</eskifiyat>
+    <yenifiyat>9.95 TL</yenifiyat>
+  </urun>
+   </cat>
+  <cat name='yavuz'>
+    <urun>
+      <adi>Rombouts Filtre Kahve</adi>
+      <resim>images/rombouts-filtre-kahve-581.jpg</resim>
+      <eskifiyat>20.00 TL</eskifiyat>
+      <yenifiyat>15.45 TL</yenifiyat>
+    </urun>
+	  <urun>
+    <adi>Rombouts Filtre Kahve</adi>
+    <resim>images/rombouts-filtre-kahve-581.jpg</resim>
+    <eskifiyat>20.00 TL</eskifiyat>
+    <yenifiyat>15.45 TL</yenifiyat>
+  </urun>
+  <urun>
+    <adi>Bosto Pirinç 500gr</adi>
+    <resim>images/bosto-pirinc-500gr-582.jpg</resim>
+    <eskifiyat>12.00 TL</eskifiyat>
+    <yenifiyat>9.95 TL</yenifiyat>
+  </urun>
+  </cat>
+</Jetrend>

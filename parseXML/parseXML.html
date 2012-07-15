@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+
+$.ajax({
+type: "GET",
+url: "parse.xml",
+dataType: "xml",
+success: xmlParser
+});
+
+});
+
+
+
+function xmlParser(xml) {
+$(xml).find('cat').each(function(){
+$('.kategori').append('<a href="#'+ $(this).attr('name') +'">'+$(this).attr('name') +'</a><br>');
+//console.log($(this).attr('title'));
+});
+
+
+
+$('.kategori a').click(function(){
+var lnk = $(this).text();
+$('.urun').remove();
+	$(xml).find('cat').each(function() {
+		if($(this).attr('name') == lnk) {
+			$(this).find('urun').each(function() {
+				$(".urunler").append('<div class="urun"><div class="title">' + $(this).find("adi").text() + '</div><div class="description">' + $(this).find("yenifiyat").text() + '</div><div class="date"><img src="'+ $(this).find("resim").text() +'" alt="'+ $(this).find("adi").text() +'">');
+				$(".urunler").fadeIn(1000);
+			});	
+		}
+	});	
+});	
+}
+
+
+				
+
+
+</script>
+</head>
+
+<body>
+<div class="kategori"></div>
+<div class="urunler"> </div>
+</body>
+</html>
