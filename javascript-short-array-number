@@ -1,6 +1,5 @@
-
 var dizi = [3,3,2,9,9,7,1,4,6,8],temp = 0;
-function kerem(){
+function yavuz(){
 for(var a = 0; a < dizi.length; a++){
     for(var b = a+1; b < dizi.length; b++){
      if(dizi[a] < dizi[b]){
@@ -13,4 +12,4 @@ for(var a = 0; a < dizi.length; a++){
 }return (dizi);
 }
 
-kerem();
+yavuz();
