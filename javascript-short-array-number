@@ -1,0 +1,16 @@
+
+var dizi = [3,3,2,9,9,7,1,4,6,8],temp = 0;
+function kerem(){
+for(var a = 0; a < dizi.length; a++){
+    for(var b = a+1; b < dizi.length; b++){
+     if(dizi[a] < dizi[b]){
+        temp = dizi[b];
+        dizi[b] = dizi[a];
+        dizi[a] = temp;
+        }
+    }
+
+}return (dizi);
+}
+
+kerem();
