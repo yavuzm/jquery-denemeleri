@@ -1,0 +1,9 @@
+var dizi = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+var temp = 0;
+
+for(var a= 0; a<dizi.length; a++){
+    if((dizi[a] % 2) == 1){ //gelen sayinin 2'ye bölümünden kalan bir ise islem yap
+        temp = dizi[a] + temp;
+    }
+}
+console.log(temp);
